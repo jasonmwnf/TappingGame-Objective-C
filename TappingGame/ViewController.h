@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    NSTimer *timer;
+    
+    int timerInt;
+    int tapInt;
+    
+}
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tapLabel;
+@property (weak, nonatomic) IBOutlet UIButton *tapButtonOutlet;
 
+- (IBAction)startGame:(id)sender;
+- (IBAction)tapButton:(id)sender;
 
 @end
 
