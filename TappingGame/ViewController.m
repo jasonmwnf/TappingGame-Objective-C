@@ -55,5 +55,22 @@
 }
 
 - (IBAction)tapButton:(id)sender {
+    
+    if (timerInt > 0) {
+        tapInt += 1;
+        
+        self.tapLabel.text = [NSString stringWithFormat:@"%i", tapInt];
+    }
+    
+    if (timerInt == 0) {
+        timerInt = 10;
+        tapInt = 0;
+        
+        self.timeLabel.text = [NSString stringWithFormat:@"%i", timerInt];
+        self.tapLabel.text = [NSString stringWithFormat:@"%i", tapInt];
+        
+        self.tapButtonOutlet.enabled = NO;
+    }
+    
 }
 @end
