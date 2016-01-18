@@ -20,6 +20,7 @@
     
     timerInt = 10;
     tapInt = 0;
+    highScoreInt = 0;
     
     self.tapButtonOutlet.enabled = NO;
     
@@ -63,6 +64,12 @@
     }
     
     if (timerInt == 0) {
+        if (tapInt > highScoreInt) {
+            highScoreInt = tapInt;
+            self.highScoreLabel.text = [NSString stringWithFormat:@"%i", highScoreInt];
+        }
+        
+        
         timerInt = 10;
         tapInt = 0;
         

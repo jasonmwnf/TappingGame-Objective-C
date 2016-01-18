@@ -14,11 +14,13 @@
     
     int timerInt;
     int tapInt;
+    int highScoreInt;
     
 }
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tapLabel;
 @property (weak, nonatomic) IBOutlet UIButton *tapButtonOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *highScoreLabel;
 
 - (IBAction)startGame:(id)sender;
 - (IBAction)tapButton:(id)sender;
